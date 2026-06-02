@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Someone Special ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    
+    overflow-x:hidden;
+
+    overflow-y:auto;
+
+    font-family:'Poppins',sans-serif;
+
+    background:black;
+
+    color:white;
+
+    width:100%;
+
+    min-height:100vh;
+}
+
+/* =========================
+PAGES
+========================= */
+
+.page{
+
+     width:100%;
+
+    min-height:100vh;
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    display:none;
+
+    text-align:center;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:20px;
+}
+
+.active{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+}
+
+#proposalpage.active{
+    display: block;
+}
+
+/* =========================
+BACKGROUND
+========================= */
+
+.background{
+
+    pointer-events: none;
+    position:absolute;
+
+    width:100%;
+    height::100%;  
+
+    top:0;
+    left:0;
+
+    background:
+    radial-gradient(circle at top,#ff4d88 0%,transparent 30%),
+    radial-gradient(circle at bottom,#ffd54f 0%,transparent 30%),
+    linear-gradient(135deg,#050505,#14000c,#260015);
+
+    z-index:-5;
+
+    animation:bgmove 10s infinite alternate;
+}
+
+@keyframes bgmove{
+
+    0%{
+        filter:hue-rotate(0deg);
+    }
+
+    100%{
+        filter:hue-rotate(25deg);
+    }
+}
+
+/* =========================
+TEXT
+========================= */
+
+h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    text-shadow:0 0 20px rgba(255,255,255,0.3);
+}
+
+.firstTitle{
+
+    font-size:4rem;
+
+    font-weight:600;
+
+    color:#ffd6e7;
+
+    line-height:1.3;
+}
+
+.special{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:5rem;
+
+    color:#ffd6e7;
+
+    line-height:1.3;
+}
+
+p{
+
+    max-width:850px;
+
+    line-height:2;
+
+    font-size:1.1rem;
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+button{
+
+    padding:14px 38px;
+
+    border:none;
+
+    border-radius:50px;
+
+    margin:12px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    color:white;
+
+    background:linear-gradient(45deg,#ff005d,#ff4da6);
+
+    transition:0.4s;
+
+    box-shadow:0 0 25px rgba(255,0,120,0.5);
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 35px rgba(255,0,120,0.8);
+}
+
+/* =========================
+GLOW
+========================= */
+
+.glow{
+
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:0 0 10px #ff4da6;
+    }
+
+    to{
+        text-shadow:0 0 30px #ff99cc;
+    }
+}
+
+/* =========================
+HEARTS
+========================= */
+
+.hearts{
+    pointer-events: none;
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    z-index:-3;
+}
+
+.heart{
+
+    position:absolute;
+    pointer-events: none;
+
+    color:#ff4d88;
+
+    animation:floatHeart linear infinite;
+
+    opacity:0.8;
+}
+
+@keyframes floatHeart{
+
+    from{
+        transform:translateY(100vh) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(-120vh) rotate(360deg);
+    }
+}
+
+/* =========================
+SUNFLOWERS
+========================= */
+
+.sunflower{
+
+    position:absolute;
+    pointer-events: none;
+
+    animation:flowerMove linear infinite;
+
+    opacity:0.9;
+
+    z-index:-1;
+}
+
+@keyframes flowerMove{
+
+    from{
+        transform:translateY(100vh) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(-120vh) rotate(360deg);
+    }
+}
+
+/* =========================
+BLACK PAGE
+========================= */
+
+#blackPage{
+    background:black;
+}
+
+.supermanText{
+
+    font-size:3rem;
+
+    line-height:1.8;
+
+    animation:fadeIn 3s ease;
+
+    padding:20px;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+/* =========================
+FINAL PAGE
+========================= */
+
+#proposalPage{
+   
+   
+    width:100%;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    padding-top:40px;
+
+    padding-bottom:220px;
+
+    -webkit-overflow-scrolling:touch;
+
+    touch-action:pan-y;
+
+}
+
+/* =========================
+PROPOSAL BOX
+========================= */
+
+.proposalBox{
+
+    width:90%;
+
+    max-width:1000px;
+    max-height: 80vh;
+    overflow-y: auto;
+    
+    margin-left:auto;
+    margin-right:auto;
+
+    padding:45px 30px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(10px);
+
+    margin-top:30px;
+    margin-bottom:220px;
+
+    box-shadow:0 0 40px rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 5;
+}
+
+/* =========================
+IMAGE
+========================= */
+
+.proposalImg{
+
+    width:min(65vw,260px);
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:7px solid #ffd54f;
+
+    box-shadow:0 0 40px rgba(255,215,0,0.6);
+
+    display:block;
+
+    margin:0 auto 35px auto;
+}
+
+/* =========================
+LOVE TEXT
+========================= */
+
+.loveText{
+
+    margin-top:20px;
+
+    font-size:1.15rem;
+
+    line-height:2.1;
+
+    padding:0 10px;
+}
+
+/* =========================
+FINAL QUESTION
+========================= */
+
+.finalQuestion{
+
+    margin-top:45px;
+
+    font-size:3.5rem;
+
+    color:#ffd54f;
+
+    font-family:'Great Vibes',cursive;
+
+    line-height:1.4;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:992px){
+
+    .special{
+        font-size:4rem;
+    }
+
+    .firstTitle{
+        font-size:3.5rem;
+    }
+
+    .proposalImg{
+        width:220px;
+        height:220px;
+    }
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    body{
+        overflow:hidden;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    .firstTitle{
+        font-size:2.6rem;
+        font-family:'Poppins',sans-serif;
+    }
+
+    .special{
+    
+        font-family:'Poppins',sans-serif !important;
+
+        font-size:5rem;
+
+        font-weight:600;
+
+        color:#ffd6e7;
+
+        line-height:1.3;
+    }
+
+    .supermanText{
+        font-size:1.8rem;
+        line-height:1.6;
+    }
+
+    p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    button{
+
+        padding:12px 28px;
+
+        font-size:0.95rem;
+    }
+
+    .proposalBox{
+
+        width:95%;
+
+        padding:30px 18px;
+    }
+
+    .proposalImg{
+
+        width:180px;
+        height:180px;
+    }
+
+    .loveText{
+
+        font-size:1rem;
+
+        line-height:1.9;
+        font-family:'Poppins',sans-serif;
+    }
+
+    .finalQuestion{
+
+        font-size:2.4rem;
+    }
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .firstTitle{
+        font-size:2.2rem;
+    }
+
+    .special{
+          font-family:'Poppins',sans-serif !important;
+
+         font-size:5rem;
+
+         font-weight:600;
+
+         color:#ffd6e7;
+
+         line-height:1.3;
+    }
+
+    .proposalTitle{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:5rem;
+
+    font-weight:700;
+
+    color:#ffd6e7;
+
+    line-height:1.3;
+
+    text-shadow:0 0 20px rgba(255,182,193,0.4);
+    }
+
+    .proposalImg{
+
+        width:150px;
+        height:150px;
+    }
+
+    .supermanText{
+        font-size:1.5rem;
+    }
+
+    .finalQuestion{
+        font-size:2rem;
+    }
+
+    button{
+
+        width:90%;
+
+        max-width:250px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+FLOATING HEARTS
+========================= -->
+
+<div class="hearts" id="hearts"></div>
+
+<!-- =========================
+PAGE 1
+========================= -->
+
+<div class="page active" id="page1">
+
+    <div class="background"></div>
+
+    <h1 class="firstTitle glow">
+        Hey Tanvie ❤️
+    </h1>
+
+    <p style="margin-bottom:30px;">
+        Before we continue...
+        I just wanna know if this beautiful person is really you 🌸
+    </p>
+
+    <button onclick="nextPage(2)">
+        Yes It's Me ❤️
+    </button>
+
+</div>
+
+<!-- =========================
+PAGE 2
+========================= -->
+
+<div class="page" id="page2">
+
+    <div class="background"></div>
+
+    <h1>
+        Do you know Rihab ? 👀
+    </h1>
+
+    <button onclick="nextPage(3)">
+        Yes I Do ❤️
+    </button>
+
+</div>
+
+<!-- =========================
+PAGE 3
+========================= -->
+
+<div class="page" id="page3">
+
+    <div class="background"></div>
+
+    <h1>
+        Is he a nice person? ❤️
+    </h1>
+
+    <div>
+
+        <button onclick="showBlackPage()">
+            Yes ❤️
+        </button>
+
+        <button onclick="goFirst()">
+            No 😢
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =========================
+BLACK PAGE
+========================= -->
+
+<div class="page" id="blackPage">
+
+    <div class="supermanText glow">
+
+        Come on Superman...<br>
+        say your stupid line ❤️
+
+    </div>
+
+    <audio id="introAudio">
+
+        <source src="So come on Superman_ say your stupid line _bebetter _tameimpala _edit _music(MP3_160K).mp3" type="audio/mpeg">
+
+    </audio>
+
+</div>
+
+<!-- =========================
+FINAL PAGE
+========================= -->
+
+<div class="page" id="proposalPage">
+
+    <div class="background"></div>
+
+    <!-- FLOWERS -->
+
+    <div id="flowers"></div>
+
+    <!-- SONG -->
+
+    <audio id="bgSong">
+
+        <source src="Frankie Valli - Can_t Take My Eyes Off You (Official Audio)(MP3_160K).mp3" type="audio/mpeg">
+
+    </audio>
+
+    <div class="proposalBox">
+
+        <!-- IMAGE -->
+
+        <img 
+        src="C:\Users\HP\my projectsss\T\c5237bfb5f2cb096d1bcecaa995c4d0d.jpg?v=5"
+        alt="Special Picture"
+        class="proposalImg">
+
+         
+
+        <h1 style="
+            font-family:'Poppins',sans-serif;
+            font-size:5rem;
+            font-weight:700;
+            color:#ffd6e7;
+            line-height:1.3;
+            ">
+
+            To The Girl Who Became My Passandita Auraat 🌻
+
+        </h1>
+
+        <!-- LETTER -->
+
+        <div class="loveText">
+
+            Hi Tanvie I know its still not the thing But I really feel the special for for you
+
+            <br><br>
+
+            Maybe it was your smile.
+            Maybe it was your voice.
+            Maybe it was the comfort I feel whenever I talk to you.
+            Maybe when you care about how I gonna feel if you reject me.
+
+            <br><br>
+
+            But slowly...
+            you became my favorite notification,
+            my favorite thought,
+            and honestly...
+            the most beautiful dream of my life
+
+            <br><br>
+
+            Whenever I see you
+            I feel like I stuck on you like a statue
+
+
+            <br><br>
+
+            Sometimes I act normal around you,
+            but truthfully... I became a little boy around you
+
+            <br><br>
+
+            I am really proud of myself that I choosed you as my passandita auraat
+
+            <br><br>
+
+            You don't even realize
+            how much happiness you bring to my face
+
+            <br><br>
+
+            And if one day someone asks me
+            what love feels like...
+            I would quietly think about you.
+
+            <br><br>
+
+            I don't want perfect moments.
+            I don't want movie-like fantasies.
+
+            <br><br>
+
+            I just want real moments with you.
+
+            <br><br>
+
+            Your laugh.
+            Your smile.
+            Your little stories.
+            Your existence beside me.
+
+            <br><br>
+
+            Maybe I'm not the best person in the world...
+            maybe Iam one of the dumbest,non talented person
+
+            <br><br>
+
+            But I promise,
+            I will try my 200% to make you smile everytime 
+            cause your smile is priceless for your smile I can pull 
+            "আমি তোমার জন্য এনে দেব
+            রোদেলা সে ক্ষণ
+            পাখিকে করে দেব তোমার আপন জন
+            পরী তুমি ভাসবে মেঘের ভাজে
+            পরী তুমি ভাসবে মেঘের ভাজে☁️"
+
+            <br><br>
+           I just wanna admit again I love You and I will love you again and again until my last breath
+
+        </div>
+
+        <!-- QUESTION -->
+
+        <div class="finalQuestion glow">
+
+            Will you be mine? ❤️🌻
+
+        </div>
+
+        <div style="margin-top:35px;">
+
+            <button onclick="accepted()">
+
+                Yes ❤️
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+/* =========================
+PAGE CHANGE
+========================= */
+
+function nextPage(page){
+
+    document.querySelectorAll(".page").forEach(p=>{
+
+        p.classList.remove("active");
+
+    });
+
+    document.getElementById("page"+page)
+    .classList.add("active");
+}
+
+/* =========================
+GO BACK
+========================= */
+
+function goFirst(){
+
+    nextPage(1);
+}
+
+/* =========================
+BLACK PAGE
+========================= */
+
+function showBlackPage(){
+
+    document.querySelectorAll(".page").forEach(p=>{
+
+        p.classList.remove("active");
+
+    });
+
+    document.getElementById("blackPage")
+    .classList.add("active");
+
+    const intro =
+    document.getElementById("introAudio");
+
+    intro.currentTime = 0;
+
+    intro.play();
+
+    setTimeout(()=>{
+
+        intro.pause();
+
+        intro.currentTime = 0;
+
+        document.getElementById("blackPage")
+        .classList.remove("active");
+
+        document.getElementById("proposalPage")
+        .classList.add("active");
+
+        const song =
+        document.getElementById("bgSong");
+
+        song.currentTime = 90;
+
+        song.play();
+
+    },5000);
+}
+
+/* =========================
+FINAL BUTTON
+========================= */
+
+function accepted(){
+
+    alert(
+        "You just made Rihab the happiest person alive ❤️"
+    );
+}
+
+/* =========================
+HEARTS
+========================= */
+
+function createHearts(){
+
+    const hearts =
+    document.getElementById("hearts");
+
+    setInterval(()=>{
+
+        const heart =
+        document.createElement("div");
+
+        heart.classList.add("heart");
+
+        heart.innerHTML = "❤";
+
+        heart.style.left =
+        Math.random()*100 + "vw";
+
+        heart.style.fontSize =
+        (Math.random()*25 + 12) + "px";
+
+        heart.style.animationDuration =
+        (Math.random()*5 + 5) + "s";
+
+        hearts.appendChild(heart);
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },10000);
+
+    },300);
+}
+
+createHearts();
+
+/* =========================
+SUNFLOWERS
+========================= */
+
+function createFlowers(){
+
+    const flowers =
+    document.getElementById("flowers");
+
+    setInterval(()=>{
+
+        const flower =
+        document.createElement("div");
+
+        flower.classList.add("sunflower");
+
+        flower.innerHTML = "🌻";
+
+        flower.style.left =
+        Math.random()*100 + "vw";
+
+        flower.style.fontSize =
+        (Math.random()*35 + 20) + "px";
+
+        flower.style.animationDuration =
+        (Math.random()*6 + 6) + "s";
+
+        flowers.appendChild(flower);
+
+        setTimeout(()=>{
+
+            flower.remove();
+
+        },12000);
+
+    },500);
+}
+
+createFlowers();
+
+</script>
+
+</body>
+
+</html>
